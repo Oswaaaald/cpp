@@ -41,7 +41,7 @@ void PhoneBook::displayAll()
 	std::cout << "|¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯|" << std::endl;
 	for (int i = 0; i < _nbContacts; i++)
 		_contacts[i].displayContact(i);
-	std::cout << "Enter the number of the contact you want to display: ";
+	std::cout << "Enter the id of the contact you want to display: ";
 	std::string index;
 	if (!std::getline(std::cin, index))
 		exit (-1);
