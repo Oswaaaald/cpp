@@ -11,19 +11,19 @@ Contact::~Contact()
 void Contact::setContact()
 {
 	std::cout << "Enter first name: ";
-	if (!std::getline(std::cin, _firstName))
+	if (!std::getline(std::cin, _firstName) || _firstName.empty())
 		exit (-1);
 	std::cout << "Enter last name: ";
-	if (!std::getline(std::cin, _lastName))
+	if (!std::getline(std::cin, _lastName) || _lastName.empty())
 		exit (-1);
 	std::cout << "Enter nickname: ";
-	if (!std::getline(std::cin, _nickname))
+	if (!std::getline(std::cin, _nickname) || _nickname.empty())
 		exit (-1);
 	std::cout << "Enter phone number: ";
-	if (!std::getline(std::cin, _phoneNumber))
+	if (!std::getline(std::cin, _phoneNumber) || _phoneNumber.empty())
 		exit (-1);
 	std::cout << "Enter darkest secret: ";
-	if (!std::getline(std::cin, _darkestSecret))
+	if (!std::getline(std::cin, _darkestSecret) || _darkestSecret.empty())
 		exit (-1);
 }
 
