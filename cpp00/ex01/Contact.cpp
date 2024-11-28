@@ -8,23 +8,42 @@ Contact::~Contact()
 {
 }
 
+int Contact::isPrintable(std::string str)
+{
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if (!isprint(str[i]))
+			return (0);
+	}
+	return (1);
+}
+
+std::string Contact::checkInput(std::string message)
+{
+	std::string input;
+	while (1)
+	{
+		std::cout << message;
+		if (!std::getline(std::cin, input) || std::cin.eof() || std::cin.fail())
+		{
+			std::cout << std::endl;
+			exit(-1);
+		}
+		if (isPrintable(input) && input.length() > 0)
+			break;
+		std::cin.clear();
+		std::cout << "Invalid input." << std::endl;
+	}
+	return (input);
+}
+
 void Contact::setContact()
 {
-	std::cout << "Enter first name: ";
-	if (!std::getline(std::cin, _firstName) || _firstName.empty())
-		exit (-1);
-	std::cout << "Enter last name: ";
-	if (!std::getline(std::cin, _lastName) || _lastName.empty())
-		exit (-1);
-	std::cout << "Enter nickname: ";
-	if (!std::getline(std::cin, _nickname) || _nickname.empty())
-		exit (-1);
-	std::cout << "Enter phone number: ";
-	if (!std::getline(std::cin, _phoneNumber) || _phoneNumber.empty())
-		exit (-1);
-	std::cout << "Enter darkest secret: ";
-	if (!std::getline(std::cin, _darkestSecret) || _darkestSecret.empty())
-		exit (-1);
+	_firstName = checkInput("Enter first name: ");
+	_lastName = checkInput("Enter last name: ");
+	_nickname = checkInput("Enter nickname: ");
+	_phoneNumber = checkInput("Enter phone number: ");
+	_darkestSecret = checkInput("Enter darkest secret: ");
 }
 
 void Contact::displayContact(int index)

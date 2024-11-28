@@ -21,6 +21,8 @@ public:
 	void setContact();
 	void displayContact(int index);
 	void displayAllContact();
+	int isPrintable(std::string str);
+	std::string checkInput(std::string message);
 };
 
 #endif

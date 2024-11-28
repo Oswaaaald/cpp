@@ -25,8 +25,6 @@ void PhoneBook::addContact()
 			_nbContacts++;
 		_next++;
 	}
-	else
-		std::cout << "Error" << std::endl;
 }
 
 void PhoneBook::displayAll()
@@ -42,16 +40,18 @@ void PhoneBook::displayAll()
 		_contacts[i].displayContact(i);
 	std::cout << "Enter the id of the contact you want to display: ";
 	std::string index;
-	if (!std::getline(std::cin, index))
-		exit (-1);
-	if (index.size() != 1 || !isdigit(index[0]))
+	while (!std::getline(std::cin, index) || index.size() != 1 || !isdigit(index[0]) || index[0] - 48 > _nbContacts || index[0] - 48 < 0)
 	{
-		std::cout << "Error" << std::endl;
-		return ;
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			exit(-1);
+		}
+		else
+		{
+			std::cin.clear();
+			std::cout << "Invalid input." << std::endl  << "Enter the id of the contact you want to display: ";
+		}
 	}
-	int ind = (int) index[0] - 48;
-	if (ind >= 0 && ind <= _nbContacts)
-		_contacts[ind].displayAllContact();
-	else
-		std::cout << "Error" << std::endl;
+	_contacts[index[0] - 48].displayAllContact();
 }
