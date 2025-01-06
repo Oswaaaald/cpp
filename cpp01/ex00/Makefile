@@ -1,13 +1,12 @@
 NAME = Brainzzz
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJS = ${SRCS:.cpp=.o}
-INCS = includes
 CC = c++
 RM = rm -rf
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 .cpp.o:
-		${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o} -I ${INCS}
+		${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o}
 
 all: ${NAME}
 

@@ -1,5 +1,5 @@
-NAME = phonebook
-SRCS = PhoneBook.cpp Contact.cpp main.cpp
+NAME = harlFilter
+SRCS = main.cpp Harl.cpp
 OBJS = ${SRCS:.cpp=.o}
 CC = c++
 RM = rm -rf
