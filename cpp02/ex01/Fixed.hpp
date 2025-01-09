@@ -9,6 +9,7 @@ class Fixed
 	private:
 		int _fixedPointValue;
 		static const int _fractionalBits;
+	
 	public:
 		Fixed();
 		Fixed(Fixed const & copy);
