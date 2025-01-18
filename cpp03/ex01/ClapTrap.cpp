@@ -5,7 +5,7 @@ ClapTrap::ClapTrap() : _name("BUZZ"), _hitPoints(10), _energyPoints(10), _attack
 	std::cout << "\033[33mClapTrap default constructor called\033[0m" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "\033[33mClapTrap constructor with assigned name called\033[0m" << std::endl;
 }
