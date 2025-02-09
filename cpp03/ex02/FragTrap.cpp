@@ -21,7 +21,6 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "\033[33mFragTrap copy constructor called\033[0m" << std::endl;
-	*this = copy;
 }
 
 FragTrap::~FragTrap()

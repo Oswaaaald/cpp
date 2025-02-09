@@ -98,5 +98,6 @@ int main()
 		std::cout << "\033[36mEnergy : " << e.getEnergy() << "\033[0m" << std::endl;
 
 		// Check does not copy itself (WSL)
+		//std::cout << "COPYYY" << std::endl;
 		//d = d;
 }

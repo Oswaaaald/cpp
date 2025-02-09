@@ -8,7 +8,6 @@ class Brain
 {
 	private:
 		std::string _ideas[100];
-		int _nbIdeas;
 	
 	public:
 		Brain();

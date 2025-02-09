@@ -50,10 +50,24 @@ int main()
 	std::cout << "Original wrong cat idea[0]: " << originalWrongCat.getBrain()->getIdea(0) << std::endl;
 	std::cout << "Copy wrong cat idea[0]: " << copyWrongCat.getBrain()->getIdea(0) << std::endl;
 
+	// Usefull to compare with ex01
 	//const Animal* animal = new Animal();
 	//std::cout << "Hi, I am a " << animal->getType() << " and I don't have a Brain!" << std::endl;
 	//animal->makeSound();
 	//delete animal;
+
+	//check 100 ideas
+	//Dog ideaDog;
+	//for (int i = 0; i < 100; i++)
+	//{
+	//	ideaDog.getBrain()->setIdea(i, "Idea ");
+	//}
+	//int k = 0;
+	//while (ideaDog.getBrain()->getIdea(k) != "Invalid index")
+	//{
+	//	std::cout << k << std::endl;
+	//	k++;
+	//}
 
 	return 0;
 }

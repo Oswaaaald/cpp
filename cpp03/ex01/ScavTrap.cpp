@@ -21,7 +21,6 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "\033[33mScavTrap copy constructor called\033[0m" << std::endl;
-	*this = copy;
 }
 
 ScavTrap::~ScavTrap()
