@@ -166,5 +166,12 @@ int main()
 		std::cout << e.what() << std::endl;
 	}
 
+	delete treeForm;
+	delete treeForm2;
+	delete robotForm;
+	delete robotForm2;
+	delete pardonForm;
+	delete pardonForm2;
+
 	return 0;
 }
