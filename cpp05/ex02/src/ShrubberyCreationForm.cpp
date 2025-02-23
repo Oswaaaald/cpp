@@ -34,14 +34,14 @@ void ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const
 		std::cout << "Error: could not open file" << std::endl;
 	else
 	{
-		file << "              v .   ._, |_  .," << std::endl;
+		file << "              v .   ._, |_  .," << _target << std::endl;
 		file << "       \'-._\\/  .  \\ /    |/_" << std::endl;
 		file << "           \\\\  _\\, y | \\//" << std::endl;
 		file << "     _\\_.___\\\\, \\\\/ -.\\||" << std::endl;
 		file << "       \'7-,--.\'._||  / / ," << std::endl;
 		file << "       /\'     \'-.\'./ / |/_.\'" << std::endl;
 		file << "                 |    |//" << std::endl;
-		file << "                 |_    /   " << _target << std::endl;
+		file << "                 |_    /   " << std::endl;
 		file << "                 |-   |" << std::endl;
 		file << "                 |   =|" << std::endl;
 		file << "                 |    |" << std::endl;

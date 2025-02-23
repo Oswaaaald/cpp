@@ -7,6 +7,7 @@
 int main()
 {
 	Intern	aLambdaGuy;
+	//Bureaucrat kaporal("kaporal", 1);
 
 	AForm	*treeForm = NULL;
 	AForm	*treeForm2 = NULL;
@@ -23,10 +24,19 @@ int main()
 		std::cout << "\033[36mFull success\033[0m" << std::endl;
 		treeForm = aLambdaGuy.makeForm("ShrubberyCreationForm", "siuuuu");
 		std::cout << *treeForm << std::endl;
+		//kaporal.signForm(*treeForm);
+		//std::cout << *treeForm << std::endl;
+		//kaporal.executeForm(*treeForm);
 		robotForm = aLambdaGuy.makeForm("RobotomyRequestForm", "student");
 		std::cout << *robotForm << std::endl;
+		//kaporal.signForm(*robotForm);
+		//std::cout << *robotForm << std::endl;
+		//kaporal.executeForm(*robotForm);
 		pardonForm = aLambdaGuy.makeForm("PresidentialPardonForm", "prisoner");
 		std::cout << *pardonForm << std::endl;
+		//kaporal.signForm(*pardonForm);
+		//std::cout << *pardonForm << std::endl;
+		//kaporal.executeForm(*pardonForm);
 		std::cout << "\033[32m======= SUCCESS ======\033[0m" << std::endl;
 	}
 	catch (std::exception &e) {
