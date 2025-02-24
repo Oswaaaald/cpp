@@ -110,7 +110,7 @@ void ScalarConverter::convert(const std::string &str)
 	if (isChar(str))
 	{
 		charValue = str[0];
-		std::cout << "CHAR" << std::endl;
+		//std::cout << "CHAR" << std::endl;
 		doubleValue = static_cast<double>(charValue);
 	}
 	else if (isInt(str))
@@ -126,18 +126,18 @@ void ScalarConverter::convert(const std::string &str)
 			return;
 		}
 
-		std::cout << "INT" << std::endl;
+		//std::cout << "INT" << std::endl;
 		doubleValue = static_cast<double>(intValue);
 	}
 	else if (isDouble(str))
 	{
 		doubleValue = std::strtod(str.c_str(), &endptr);
-		std::cout << "DOUBLE" << std::endl;
+		//std::cout << "DOUBLE" << std::endl;
 	}
 	else if (isFloat(str))
 	{
 		floatValue = std::strtof(str.c_str(), &endptr);
-		std::cout << "FLOAT" << std::endl;
+		//std::cout << "FLOAT" << std::endl;
 		doubleValue = static_cast<double>(floatValue);
 	}
 	else
