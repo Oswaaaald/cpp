@@ -6,8 +6,8 @@
 
 class Base
 {
-public:
-	virtual ~Base();
+	public:
+		virtual ~Base();
 };
 
 Base *generate(void);
