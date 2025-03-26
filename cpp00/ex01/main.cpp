@@ -11,7 +11,7 @@ int main()
 		if (!std::getline(std::cin, command))
 		{
 			std::cout << std::endl;
-			exit (-1);
+			return (-1);
 		}
 		if (command == "ADD")
 			phoneBook.addContact();

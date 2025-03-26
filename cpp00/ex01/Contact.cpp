@@ -27,7 +27,7 @@ std::string Contact::checkInput(std::string message)
 		if (!std::getline(std::cin, input) || std::cin.eof() || std::cin.fail())
 		{
 			std::cout << std::endl;
-			exit(-1);
+			break;
 		}
 		if (isPrintable(input) && input.length() > 0)
 			break;
