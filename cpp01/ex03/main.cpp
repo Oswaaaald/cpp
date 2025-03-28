@@ -4,25 +4,22 @@
 int main()
 {
 	{
-		Weapon club = Weapon("golf club");
+		Weapon club = Weapon("crude spiked club");
 
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("baseball bat");
+		club.setType("some other type of club");
 		bob.attack();
 	}
 	{
-		Weapon club = Weapon("blue table");
+		Weapon club = Weapon("crude spiked club");
 
 		HumanB jim("Jim");
-		jim.attack();
 		jim.setWeapon(club);
 		jim.attack();
-		club.setType("red table");
+		club.setType("some other type of club");
 		jim.attack();
-
-		HumanB max("Max");
-		max.attack();
 	}
+
 	return 0;
 }
