@@ -1,5 +1,5 @@
 NAME = UselessViolence
-SRCS = main.cpp Weapon.cpp Weapon.hpp HumanA.cpp HumanA.hpp HumanB.cpp HumanB.hpp
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS = ${SRCS:.cpp=.o}
 CC = c++
 RM = rm -rf

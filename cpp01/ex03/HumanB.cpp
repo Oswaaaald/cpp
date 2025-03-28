@@ -4,6 +4,10 @@ HumanB::HumanB(std::string name) : name(name), weapon(NULL)
 {
 }
 
+HumanB::~HumanB()
+{
+}
+
 void	HumanB::attack()
 {
 	if (weapon)

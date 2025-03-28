@@ -20,6 +20,9 @@ int main()
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
+
+		HumanB max("Max");
+		max.attack();
 	}
 	return 0;
 }
