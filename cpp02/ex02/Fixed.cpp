@@ -87,32 +87,32 @@ std::ostream & operator<<(std::ostream & out, Fixed const & value)
 
 bool Fixed::operator>(Fixed const & value) const
 {
-	return this->_fixedPointValue > value.toFloat();
+	return this->_fixedPointValue > value._fixedPointValue;
 }
 
 bool Fixed::operator<(Fixed const & value) const
 {
-	return this->_fixedPointValue < value.toFloat();
+	return this->_fixedPointValue < value._fixedPointValue;
 }
 
 bool Fixed::operator>=(Fixed const & value) const
 {
-	return this->_fixedPointValue >= value.toFloat();
+	return this->_fixedPointValue >= value._fixedPointValue;
 }
 
 bool Fixed::operator<=(Fixed const & value) const
 {
-	return this->_fixedPointValue <= value.toFloat();
+	return this->_fixedPointValue <= value._fixedPointValue;
 }
 
 bool Fixed::operator==(Fixed const & value) const
 {
-	return this->_fixedPointValue == value.toFloat();
+	return this->_fixedPointValue == value._fixedPointValue;
 }
 
 bool Fixed::operator!=(Fixed const & value) const
 {
-	return this->_fixedPointValue != value.toFloat();
+	return this->_fixedPointValue != value._fixedPointValue;
 }
 
 Fixed Fixed::operator+(Fixed const & value) const
