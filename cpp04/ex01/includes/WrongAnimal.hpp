@@ -18,8 +18,8 @@ class WrongAnimal
 		virtual ~WrongAnimal();
 
 		std::string getType() const;
-		virtual void makeSound() const;
-		virtual Brain* getBrain() const;
+		void makeSound() const;
+		Brain* getBrain() const;
 };
 
 #endif
