@@ -86,8 +86,8 @@ int main()
 		std::cout << b1 << std::endl;
 		Form f1("f1", 1, 1);
 		std::cout << f1 << std::endl;
-		b1.signForm(f1);
-		std::cout << f1 << std::endl;
+		//b1.signForm(f1);
+		//std::cout << f1 << std::endl;
 		b1.incrementGrade();
 		std::cout << b1 << std::endl;
 		b1.signForm(f1);
