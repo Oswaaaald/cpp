@@ -150,7 +150,7 @@ int main()
 	try {
 		std::cout << std::endl;
 		std::cout << "\033[35m======= 8th Try ======\033[0m" << std::endl;
-		std::cout << "\033[36mCreate 1 Bureaucrat, create a form with grade too high\033[0m" << std::endl;
+		std::cout << "\033[36mCreate 1 Bureaucrat, create a form with grade too low\033[0m" << std::endl;
 		Bureaucrat b1("b1", 1);
 		std::cout << b1 << std::endl;
 		Form f1("f1", 151, 1);
@@ -165,7 +165,7 @@ int main()
 	try {
 		std::cout << std::endl;
 		std::cout << "\033[35m======= 9th Try ======\033[0m" << std::endl;
-		std::cout << "\033[36mCreate 1 Bureaucrat, create a form with grade too low\033[0m" << std::endl;
+		std::cout << "\033[36mCreate 1 Bureaucrat, create a form with grade too high\033[0m" << std::endl;
 		Bureaucrat b1("b1", 1);
 		std::cout << b1 << std::endl;
 		Form f1("f1", 0, 1);
