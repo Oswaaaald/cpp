@@ -124,11 +124,12 @@ int main()
 	try {
 		std::cout << std::endl;
 		std::cout << "\033[35m======= 1st Try ======\033[0m" << std::endl;
-		std::cout << "\033[36mBasic Robotomy usage with 2 guys\033[0m" << std::endl;
+		std::cout << "\033[36mBasic Presidential usage with 2 guys\033[0m" << std::endl;
 		std::cout << *pardonForm << std::endl;
 		kaporal.signForm(*pardonForm);
 		std::cout << *pardonForm << std::endl;
-		mercenary.executeForm(*pardonForm);
+		kaporal.executeForm(*pardonForm);
+		//mercenary.executeForm(*pardonForm);
 		std::cout << "\033[32m======= SUCCESS ======\033[0m" << std::endl;
 	}
 	catch (std::exception &e) {
@@ -139,7 +140,7 @@ int main()
 	try {
 		std::cout << std::endl;
 		std::cout << "\033[35m======= 2nd Try ======\033[0m" << std::endl;
-		std::cout << "\033[36mRobotomy try execute but not signed\033[0m" << std::endl;
+		std::cout << "\033[36mPresidential try execute but not signed\033[0m" << std::endl;
 		std::cout << *pardonForm2 << std::endl;
 		mercenary.executeForm(*pardonForm2);
 		std::cout << *pardonForm2 << std::endl;
@@ -154,7 +155,7 @@ int main()
 	try {
 		std::cout << std::endl;
 		std::cout << "\033[35m======= 3rd Try ======\033[0m" << std::endl;
-		std::cout << "\033[36mRobotomy try execute but no permissions\033[0m" << std::endl;
+		std::cout << "\033[36mPresidential try execute but no permissions\033[0m" << std::endl;
 		std::cout << *pardonForm2 << std::endl;
 		kaporal.signForm(*pardonForm2);
 		std::cout << *pardonForm2 << std::endl;
