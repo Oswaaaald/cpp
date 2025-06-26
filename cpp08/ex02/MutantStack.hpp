@@ -18,16 +18,14 @@ class MutantStack : public std::stack<T>
 			return *this;
 		}
 
-		// allows to use the iterator of the container_type of the stack
 		typedef typename std::stack<T>::container_type::iterator iterator;
 
 		// c comes from std::stack<T>, and is a container_type
-		// send an iterator to the beginning of the container (first element of the stack)
 		iterator begin()
 		{
 			return this->c.begin();
 		}
-		// send an iterator to the end of the container (last element of the stack)
+
 		iterator end()
 		{
 			return this->c.end();
