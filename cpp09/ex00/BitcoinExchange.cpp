@@ -4,9 +4,8 @@ BitcoinExchange::BitcoinExchange()
 {
 }
 
-BitcoinExchange::BitcoinExchange(const BitcoinExchange &copy)
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &copy) : _exchangeRates(copy._exchangeRates)
 {
-	*this = copy;
 }
 
 BitcoinExchange::~BitcoinExchange()
