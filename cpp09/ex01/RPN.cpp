@@ -1,6 +1,8 @@
 #include "RPN.hpp"
 
-RPN::RPN() {}
+RPN::RPN()
+{
+}
 
 RPN::RPN(const RPN &copy) : _stack(copy._stack)
 {
@@ -13,7 +15,9 @@ RPN &RPN::operator=(const RPN &copy)
 	return *this;
 }
 
-RPN::~RPN() {}
+RPN::~RPN()
+{
+}
 
 bool RPN::isOperator(const std::string &sign) const
 {
