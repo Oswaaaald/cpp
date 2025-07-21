@@ -9,7 +9,6 @@ int main(int argc, char **argv)
 			std::cerr << "Error: at least one positive integer required." << std::endl;
 			return 1;
 		}
-
 		PmergeMe sorter;
 		sorter.parseInput(argc, argv);
 		sorter.sortAndDisplay();

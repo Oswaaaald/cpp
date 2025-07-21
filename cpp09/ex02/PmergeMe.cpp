@@ -36,7 +36,7 @@ void PmergeMe::parseInput(int argc, char **argv)
 	{
 		std::string arg(argv[i]);
 		if (!_isNumeric(arg))
-			throw std::runtime_error("Error");
+			throw std::runtime_error("Error: all arguments must be positive integers");
 		int value = std::atoi(argv[i]);
 		if (value < 0)
 			throw std::runtime_error("Error");
@@ -58,6 +58,7 @@ static std::vector<size_t> getJacobsthalOrder(size_t size)
 		j2 = j2 + 2 * j1;
 		j1 = tmp;
 	}
+
 	for (size_t i = 0; i < size; ++i)
 		if (!used[i])
 			order.push_back(i);
