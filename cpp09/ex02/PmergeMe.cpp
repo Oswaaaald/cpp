@@ -36,7 +36,7 @@ void PmergeMe::parseInput(int argc, char **argv)
 	{
 		std::string arg(argv[i]);
 		if (!_isNumeric(arg))
-			throw std::runtime_error("Error: all arguments must be positive integers");
+			throw std::runtime_error("Error");
 		int value = std::atoi(argv[i]);
 		if (value < 0)
 			throw std::runtime_error("Error");

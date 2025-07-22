@@ -29,7 +29,7 @@ bool RPN::isOperator(const std::string &sign) const
 void RPN::applyOperator(const std::string &sign)
 {
 	if (this->_stack.size() < 2)
-		throw std::runtime_error("Error: not enough operands");
+		throw std::runtime_error("Error");
 
 	int b = this->_stack.top();
 	this->_stack.pop();
@@ -45,7 +45,7 @@ void RPN::applyOperator(const std::string &sign)
 	else if (sign == "/")
 	{
 		if (b == 0)
-			throw std::runtime_error("Error: division by zero");
+			throw std::runtime_error("Error");
 		this->_stack.push(a / b);
 	}
 }
@@ -64,11 +64,11 @@ int RPN::compute(const std::string &expression)
 			char *end;
 			int value = std::strtol(sign.c_str(), &end, 10);
 			if (*end || value < 0 || value > 9)
-				throw std::runtime_error("Error: invalid input");
+				throw std::runtime_error("Error");
 			this->_stack.push(value);
 		}
 	}
 	if (this->_stack.size() != 1)
-		throw std::runtime_error("Error: invalid expression");
+		throw std::runtime_error("Error");
 	return this->_stack.top();
 }
