@@ -31,7 +31,7 @@ void BitcoinExchange::loadDataBase(const std::string &filename)
 	std::getline(file, line);
 	while (std::getline(file, line)) {
 		std::istringstream iss(line);
-		std::string date
+		std::string date;
 		std::string value;
 		if (!std::getline(iss, date, ',') || !std::getline(iss, value)) {
 			std::cerr << "Error: invalid line format in file." << std::endl;
