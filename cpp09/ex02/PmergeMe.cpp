@@ -70,7 +70,7 @@ void PmergeMe::_fordJohnsonVector(std::vector<int> &vec)
 	if (vec.size() <= 1)
 		return;
 
-	std::vector<std::pair<int, int>> pairs;
+	std::vector<std::pair<int, int> > pairs;
 	for (size_t i = 0; i + 1 < vec.size(); i += 2)
 	{
 		if (vec[i] < vec[i + 1])
@@ -83,7 +83,7 @@ void PmergeMe::_fordJohnsonVector(std::vector<int> &vec)
 		chain.push_back(pairs[i].first);
 	_fordJohnsonVector(chain);
 
-	std::vector<std::pair<int, int>> pend = pairs;
+	std::vector<std::pair<int, int> > pend = pairs;
 	if (vec.size() % 2 != 0)
 		pend.push_back(std::make_pair(-1, vec.back()));
 
